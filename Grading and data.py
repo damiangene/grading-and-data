@@ -36,6 +36,6 @@ def append_student():
 
         print (students)
         with open('names_marks.txt', 'w') as outfile: 
-            json.dump(students, outfile)
+            json.dump(students, outfile, indent = 2)
 
 append_student()

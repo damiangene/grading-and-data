@@ -1,1 +1,19 @@
-{"Oliver": {"Marks": ["70", "80", "99"]}, "Damian": null, "Luke": {"Marks": ["70"]}}
+{
+  "Oliver": {
+    "Marks": [
+      "70",
+      "80",
+      "99"
+    ]
+  },
+  "Damian": {
+    "Marks": [
+      "40"
+    ]
+  },
+  "Luke": {
+    "Marks": [
+      "70"
+    ]
+  }
+}
