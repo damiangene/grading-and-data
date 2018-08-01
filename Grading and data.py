@@ -1,3 +1,4 @@
+import json
 students = {}
 new_student = 0
 
@@ -21,9 +22,20 @@ def action_choice():
 
 
 def append_student():
-  student = action_choice()
-  mark = input("what mark did %s get?\n" % (student))
-  students.update({student:mark})
+  name = action_choice()
+  mark = input("what mark did %s get?\n" % (name))
+  
+  with open("names_marks.txt") as tmpfile:
+        students = json.load(tmpfile)
+
+        if students.get(name):
+            students[name]["Marks"].append(mark)
+        
+        else:
+            students[name] = {"Marks":[mark]}
+
+        print (students)
+        with open('names_marks.txt', 'w') as outfile: 
+            json.dump(students, outfile)
 
 append_student()
-print (students)
